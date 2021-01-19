@@ -1,49 +1,39 @@
-.form-item{
+.nextMatch{
+    position: relative;
+    margin:auto;
     width:32px;
     height:32px;
-    padding:5px;
+    padding:3px;
+    border:1px solid #eee;
     border-radius: 50%;
-    color:#fff;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-size:14px;
-    font-weight: bold;
-    position: relative;
     cursor: pointer;
 
-    &.drawn{
-        background:grey;
+    &:hover .nextMatch-tooltip{
+        display: block;
     }
-
-    &.win{
-        background: #1fbe0a;
-    }
-
-    &.lost{
-        background: #be0a0a;
-    }
-
-    &:hover .form-item-tooltip{
-        display: flex;
-    }
-
 }
 
-.form-item-tooltip{
+.nextMatch-image{
+    width:100%;
+
+    img{
+        max-width: 100%;
+    }
+}
+
+.nextMatch-tooltip{
     display: none;
     flex-direction: column;
     justify-content: center;
-    position:absolute;
+    position: absolute;
     background: #fff;
     width: max-content;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    bottom:35px;
-    right:-25px;
-    padding:12px 10px;
-    font-weight: bold;
+    bottom: 35px;
+    right: -26px;
+    padding: 12px 10px;
     font-size: 14px;
-  
+
     &:before{
         content: "";
         position: absolute;
@@ -56,10 +46,11 @@
         border-color: #ffffff transparent transparent transparent;
     }
 
+    
     &:hover{
         background:#3672e0;
 
-        .form-item_date,.matchResult{
+        .nextMatch-date,.matchResult{
             color:#fff;
         }
 
@@ -73,9 +64,3 @@
         }
     }
 }
-
-.form-item_date{
-    color:#4d4d4d;
-    font-weight: normal;
-}
-

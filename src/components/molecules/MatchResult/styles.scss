@@ -5,22 +5,11 @@
     text-decoration: none;
     color:#424242;
     padding-top:8px;
-
-    &:before{
-        content: "";
-        position: absolute;
-        right: 33px;
-        bottom: -8px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 8px 9px 0 9px;
-        border-color: #ffffff transparent transparent transparent;
-    }
 }
 
 .result-teamName{
     text-decoration: none;
+    font-weight: bold;
 }
 
 .result-badge{

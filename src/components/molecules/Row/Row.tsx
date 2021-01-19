@@ -1,6 +1,7 @@
 import React from "react";
 import { Forms } from "../../organisms/Forms/Forms";
 import { FormTeamType, FormType } from "../FormItem/FormItem";
+import { NextMatch } from "../NextMatch/NextMatch";
 import { PositionToolTip } from "../PositionToolTip/PositionToolTip";
 import { TeamName } from "../TeamName/TeamName";
 
@@ -18,12 +19,14 @@ type RowInfoType = {
     gd:string;
     points:number;
     latestMatch: {
-        first_team:FormTeamType,
-        second_team:FormTeamType
+        this_team:FormTeamType,
+        other_team:FormTeamType
+        date:string
     };
     nextMatch: {
-        first_team:FormTeamType,
-        second_team:FormTeamType,
+        this_team:FormTeamType,
+        other_team:FormTeamType,
+        date:string,
         time:string
     };
     form: FormType[];
@@ -43,7 +46,7 @@ export const Row:React.FC<{info:RowInfoType}> = (props) => {
                 <img src="./images/arrow-down.png"/>
             </td>
             <td className="pos-tooltip-button"><PositionToolTip position={props.info.position} prevPosition={props.info.prevPosition} /></td>
-            <td className="t-left"> <TeamName teamName={props.info.teamName} image={"images/"+props.info.teamImage}/> </td>
+            <td className="t-left"> <TeamName teamName={props.info.teamName} image={"images/"+props.info.teamImage}/></td>
             <td>{props.info.played}</td>
             <td>{props.info.won}</td>
             <td>{props.info.drawn}</td>
@@ -53,7 +56,7 @@ export const Row:React.FC<{info:RowInfoType}> = (props) => {
             <td>{props.info.gd}</td>
             <td><b>{props.info.points}</b></td>
             <td><Forms forms={props.info.form}/></td>
-            <td></td>
+            <td><NextMatch nextMatch={props.info.nextMatch}/></td>
         </tr>
     )
 }

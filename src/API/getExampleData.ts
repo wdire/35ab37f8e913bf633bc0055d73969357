@@ -20,13 +20,13 @@ export type exampleDataType = {
         points: number;
         form: FormType[];
         latest_match: {
-            first_team:FormTeamType,
-            second_team:FormTeamType
+            this_team:FormTeamType,
+            other_team:FormTeamType
             date:string
         };
         next_match: {
-            first_team:FormTeamType,
-            second_team:FormTeamType,
+            this_team:FormTeamType,
+            other_team:FormTeamType,
             date:string,
             time:string
         };
@@ -133,13 +133,13 @@ const exampleData:exampleDataType[] = [
                 },
             ],
             latest_match:{
-                first_team:{
+                other_team:{
                     shortName:"LIV",
                     name:"Liverpool",
-                    image:"t004.png",
+                    image:"t002.png",
                     score:0
                 },
-                second_team:{
+                this_team:{
                     shortName:"MUN",
                     name:"Manchester United",
                     image:"t001.png",
@@ -148,12 +148,12 @@ const exampleData:exampleDataType[] = [
                 date:"Saturday 26 December 2020"
             },
             next_match:{
-                first_team:{
+                other_team:{
                     shortName:"FUL",
                     name:"Fulham",
-                    image:"t018.png",
+                    image:"t003.png",
                 },
-                second_team:{
+                this_team:{
                     shortName:"MUN",
                     name:"Manchester United",
                     image:"t001.png",
