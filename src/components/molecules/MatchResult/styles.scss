@@ -5,6 +5,24 @@
     text-decoration: none;
     color:#424242;
     padding-top:8px;
+
+    &.rightArrow{
+        width:100%;
+        justify-content: flex-start;
+        background: #eee;
+        padding:10px;
+        width:100%;
+
+        &:hover{
+            background: linear-gradient(20deg, #2b68d8, #163a7c);
+            color: #fff;
+
+            .result-score{
+                background:white;
+                color:#202020;
+            }
+        }
+    }
 }
 
 .result-teamName{
@@ -30,6 +48,7 @@
     background: #3672e0;
     height:25px;
     position: relative;
+    font-weight: bold;
 }
 
 .result-seperator{
@@ -37,4 +56,11 @@
     width:1px;
     background:#bebebe;
     margin:0 8px;
+}
+
+.result-rightArrow{
+    margin-left: auto;
+    font-size: 20px;
+    line-height: 1px;
+    padding-left:50px;
 }

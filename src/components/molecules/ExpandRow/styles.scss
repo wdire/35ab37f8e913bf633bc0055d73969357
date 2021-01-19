@@ -7,3 +7,66 @@
         display: table-row;
     }
 }
+
+.expandableRow-wrapper{
+    padding:30px;
+    text-align: left;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+}
+
+.expanded-team-image{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right:10px;
+}
+
+.expanded-team-name{
+    display: inline-block;
+    vertical-align: middle;
+    font-size:22px;
+    color:#202020;
+    font-weight: 600;
+}
+
+.expanded-rightside{
+    font-size:12px;
+    display:flex;
+}
+
+.expanded-result{
+    display: block;
+}
+
+.expanded-match-result{
+    margin-right:30px;
+}
+
+.expanded-recent-result_date{
+    font-weight: 500;
+    margin-bottom:10px;
+}
+
+.expanded-button{
+    align-self: flex-end;
+    height:45px;
+    border-radius: 6px;
+    text-decoration: none;
+    line-height: 45px;
+    background: #3672e0;
+    color:#fff;
+    font-size:14px;
+    padding-left:30px;
+    padding-right:10px;
+    cursor: pointer;
+
+    &:hover{
+        background: linear-gradient(20deg, #2b68d8, #163a7c);
+        color:#fff;
+    }
+}
+
+.expanded-button_text{
+    padding:10px;
+}
