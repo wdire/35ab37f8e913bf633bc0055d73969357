@@ -1,19 +1,19 @@
 import React from "react";
 
 type TableHeaderInfoType = {
-    position?:"center" | "left";
+    position?:"left";
     paddingLeft?:number;
 }
 
-export const TableHeader:React.FC<TableHeaderInfoType> = (props) => {
+require("./styles.scss");
 
-    let paddingLeft = props.paddingLeft ? "padding-left:"+(props.paddingLeft + "px;") : "";
+export const TableHeader:React.FC<TableHeaderInfoType> = (props) => {
 
     return (
         <th className={
-            (props.position ? ("t-header_" + props.position) : "")
+            (props.position ? ("t-" + props.position) : undefined)
         }
-        style={{paddingLeft}}
+        style={ props.paddingLeft ? {paddingLeft:props.paddingLeft} : {}}
         >{props.children}</th>
     )
 }

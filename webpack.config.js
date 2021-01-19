@@ -40,11 +40,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({ inject: true, template: path.join(APP_PATH, 'index.html') }),
     new ForkTsCheckerWebpackPlugin(),
-    /*new copyWebpackPlugin({
+    new copyWebpackPlugin({
       patterns: [
         { from: "src/images/", to: "images" },
       ],
-    })*/
+    })
   ],
 
   performance: {

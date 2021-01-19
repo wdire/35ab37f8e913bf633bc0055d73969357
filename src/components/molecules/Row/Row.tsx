@@ -23,13 +23,17 @@ type formInfoType = {
     
 }
 
+require("./styles.scss");
+
 export const Row:React.FC<{info:RowInfoType}> = (props) => {
 
     return (
         <tr>
-            <td>\/</td>
+            <td className="revealMore">
+                <img src="./images/arrow-down.png"/>
+            </td>
             <td>{props.info.position}</td>
-            <td> <TeamName teamName={props.info.teamName} image="t001.png"/> </td>
+            <td className="t-left"> <TeamName teamName={props.info.teamName} image="t001.png"/> </td>
             <td>{props.info.played}</td>
             <td>{props.info.won}</td>
             <td>{props.info.drawn}</td>

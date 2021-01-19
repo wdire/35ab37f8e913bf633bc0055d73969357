@@ -1,0 +1,31 @@
+tbody td{
+    padding:14px 10px;
+    border-bottom:1px solid #c4c4c4;
+    text-align: center;
+
+    &.revealMore{
+        justify-content: center;
+        align-content: center;
+        background: #eee;
+        width:55px;
+        line-height: 10px;
+        cursor:pointer;
+
+        img{
+            height:16px;
+        }
+
+        &:hover{
+            background:#cecece;
+        }
+    }
+}
+
+tbody{
+    &:before{
+        content: "-";
+        line-height: .5rem;
+        opacity: 0;
+        display: block;
+    }
+}
