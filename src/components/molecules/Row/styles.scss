@@ -23,6 +23,13 @@ tbody td{
     }
 }
 
+tbody tr{
+    &.opened{
+        background:linear-gradient(20deg,#2b68d8, #163a7c);
+        color:#fff;
+    }
+}
+
 tbody{
     &:before{
         content: "-";

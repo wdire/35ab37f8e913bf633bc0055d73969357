@@ -1,5 +1,5 @@
 import { FormTeamType, FormType } from './../components/molecules/FormItem/FormItem';
-//Example data.(Takes long to write many entries it with hand..)
+//Example data. Didn't wrote much entry takes too long to write by hand.
 
 import { FormStatus } from "../components/molecules/FormItem/FormItem";
 

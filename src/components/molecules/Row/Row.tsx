@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Forms } from "../../organisms/Forms/Forms";
 import { FormTeamType, FormType } from "../FormItem/FormItem";
 import { NextMatch } from "../NextMatch/NextMatch";
@@ -32,17 +32,23 @@ type RowInfoType = {
     form: FormType[];
 }
 
-type formInfoType = {
-    
-}
-
 require("./styles.scss");
 
-export const Row:React.FC<{info:RowInfoType}> = (props) => {
+export const Row:React.FC<{info:RowInfoType, expanderId:number, expandRow:Function, closeRow:Function}> = (props) => {
+
+    const [expanded, setExpanded] = useState(false);
 
     return (
-        <tr>
-            <td className="revealMore">
+        <tr className={expanded ? "opened" : undefined}>
+            <td className="revealMore" onClick={()=>{
+                if(!expanded){
+                    props.expandRow(props.expanderId);
+                    setExpanded(true);
+                }else{
+                    props.closeRow(props.expanderId);
+                    setExpanded(false);
+                }
+            }}>
                 <img src="./images/arrow-down.png"/>
             </td>
             <td className="pos-tooltip-button"><PositionToolTip position={props.info.position} prevPosition={props.info.prevPosition} /></td>
