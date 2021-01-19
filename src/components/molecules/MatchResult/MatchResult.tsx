@@ -32,7 +32,7 @@ export const MatchResult:React.FC<MatchResultType> = (props) => {
                      ) }
                 </div> 
                 <div className="result-badge"><img src={"images/"+props.secondTeam.image}/></div>
-                <div className="result-teamName">{props.shortName ? props.firstTeam.shortName : props.secondTeam.name}</div>
+                <div className="result-teamName">{props.shortName ? props.secondTeam.shortName : props.secondTeam.name}</div>
                 
                 {props.rightArrow ? (
                     <>
