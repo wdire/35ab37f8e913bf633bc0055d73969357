@@ -16,6 +16,7 @@ body{
 }
 
 .container{
+    max-width: 99%;
     width:1300px;
     margin:0 auto;
     padding:10px;
@@ -27,4 +28,25 @@ body{
 
 .t-center{
     text-align:center;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.flex-item {
+    flex: 0.001;
+}
+
+.flex-dc{
+    flex-direction: column;
+}
+
+.flex-dr{
+    flex-direction: row;
+}
+
+.flex-jcc{
+    justify-content: center;
 }

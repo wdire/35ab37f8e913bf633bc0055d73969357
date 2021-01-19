@@ -5,10 +5,12 @@ type TeamNameType = {
     image:string;
 }
 
+require("./styles.scss");
+
 export const TeamName:React.FC<TeamNameType> = (props) => {
 
     return (
-        <a href="#">
+        <a href="#" className="club-name">
             <span className="team-name_image">
                 <img src={props.image}/>
             </span>

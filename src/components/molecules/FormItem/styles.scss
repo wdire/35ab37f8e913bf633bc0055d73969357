@@ -1,0 +1,52 @@
+.form-item{
+    width:32px;
+    height:32px;
+    padding:5px;
+    border-radius: 50%;
+    color:#fff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:14px;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+
+    &.drawn{
+        background:grey;
+    }
+
+    &.win{
+        background: #1fbe0a;
+    }
+
+    &.lost{
+        background: #be0a0a;
+    }
+
+    &:hover .form-item-tooltip{
+        display: flex;
+    }
+
+}
+
+.form-item-tooltip{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position:absolute;
+    background: #fff;
+    width: max-content;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    bottom:50px;
+    right:-25px;
+    padding:12px 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-item_date{
+    color:#4d4d4d;
+    font-weight: normal;
+}
+

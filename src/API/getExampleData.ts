@@ -1,15 +1,13 @@
-//Example data
+import { FormTeamType, FormType } from './../components/molecules/FormItem/FormItem';
+//Example data.(Takes long to write many entries it with hand..)
 
-export enum formStatus {
-    WIN=1,
-    LOST=2,
-    DRAWN=3
-}
+import { FormStatus } from "../components/molecules/FormItem/FormItem";
 
 export type exampleDataType = {
     position: number;
     prev_position: number;
     name: string;
+    shortName:string,
     image: string;
     info: {
         played: number;
@@ -18,16 +16,20 @@ export type exampleDataType = {
         lost: number;
         gf: number;
         ga: number;
-        gd: number;
+        gd: string;
         points: number;
-        form: {
-            status: formStatus;
-            date: string;
-            first_team: object;
-            second_team: object;
-        }[];
-        latest_match: object;
-        next_match: object;
+        form: FormType[];
+        latest_match: {
+            first_team:FormTeamType,
+            second_team:FormTeamType
+            date:string
+        };
+        next_match: {
+            first_team:FormTeamType,
+            second_team:FormTeamType,
+            date:string,
+            time:string
+        };
         performance_chart: {};
     }
 }
@@ -37,6 +39,7 @@ const exampleData:exampleDataType[] = [
         position:1,
         prev_position:1,
         name:"Manchester United",
+        shortName:"MUN",
         image:"t001.png",
         info:{
             played:18,
@@ -45,60 +48,84 @@ const exampleData:exampleDataType[] = [
             lost:3,
             gf:34,
             ga:24,
-            gd:10,
+            gd:"+10",
             points:37,
             form:[
                 {
-                    status:formStatus.DRAWN,
-                    date:"",
+                    status:FormStatus.DRAWN,
+                    date:"Saturday 30 December 2020",
                     first_team:{
+                        shortName:"LEI",
                         name:"Leicester City",
                         image:"t003.png",
                         score:2
                     },
                     second_team:{
+                        shortName:"MUN",
                         name:"Manchester United",
                         image:"t001.png",
                         score:2
                     },
                 },
                 {
-                    status:formStatus.WIN,
-                    date:"",
+                    status:FormStatus.WIN,
+                    date:"Saturday 31 December 2020",
                     first_team:{
+                        shortName:"LEI",
                         name:"Leicester City",
                         image:"t003.png",
                         score:1
                     },
                     second_team:{
+                        shortName:"MUN",
                         name:"Manchester United",
                         image:"t001.png",
                         score:2
                     },
                 },
                 {
-                    status:formStatus.WIN,
-                    date:"",
+                    status:FormStatus.WIN,
+                    date:"Saturday 32:d December 2021",
                     first_team:{
+                        shortName:"LEI",
                         name:"Leicester City",
                         image:"t003.png",
                         score:0
                     },
                     second_team:{
+                        shortName:"MUN",
                         name:"Manchester United",
                         image:"t001.png",
                         score:1
                     },
                 },
                 {
-                    status:formStatus.WIN,
+                    status:FormStatus.WIN,
                     date:"",
                     first_team:{
+                        shortName:"LEI",
                         name:"Leicester City",
                         image:"t003.png",
                         score:0
                     },
                     second_team:{
+                        shortName:"MUN",
+                        name:"Manchester United",
+                        image:"t001.png",
+                        score:1
+                    },
+                },
+                {
+                    status:FormStatus.DRAWN,
+                    date:"",
+                    first_team:{
+                        shortName:"LEI",
+                        name:"Leicester City",
+                        image:"t003.png",
+                        score:0
+                    },
+                    second_team:{
+                        shortName:"MUN",
                         name:"Manchester United",
                         image:"t001.png",
                         score:1
@@ -107,25 +134,31 @@ const exampleData:exampleDataType[] = [
             ],
             latest_match:{
                 first_team:{
+                    shortName:"LIV",
                     name:"Liverpool",
                     image:"t004.png",
                     score:0
                 },
                 second_team:{
+                    shortName:"MUN",
                     name:"Manchester United",
                     image:"t001.png",
                     score:0
                 },
+                date:"Saturday 26 December 2020"
             },
             next_match:{
                 first_team:{
+                    shortName:"FUL",
                     name:"Fulham",
                     image:"t018.png",
                 },
                 second_team:{
+                    shortName:"MUN",
                     name:"Manchester United",
                     image:"t001.png",
                 },
+                date:"Sunday 27 December 2020",
                 time:"22:15"
             },
             performance_chart:{}

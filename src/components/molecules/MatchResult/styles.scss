@@ -1,0 +1,51 @@
+.matchResult{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color:#424242;
+    padding-top:8px;
+
+    &:before{
+        content: "";
+        position: absolute;
+        right: 33px;
+        bottom: -8px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 9px 0 9px;
+        border-color: #ffffff transparent transparent transparent;
+    }
+}
+
+.result-teamName{
+    text-decoration: none;
+}
+
+.result-badge{
+
+    height:25px;
+    margin:0 5px;
+
+    img{
+        max-width: 100%;
+    }
+}
+
+.result-score{
+    display:flex;
+    align-items: center;
+    padding:0 8px;
+    color:#fff;
+    background: #3672e0;
+    height:25px;
+    position: relative;
+}
+
+.result-seperator{
+    height:60%;
+    width:1px;
+    background:#bebebe;
+    margin:0 8px;
+}

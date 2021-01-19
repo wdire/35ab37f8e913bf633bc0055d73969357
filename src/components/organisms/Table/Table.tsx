@@ -1,5 +1,5 @@
 import React from "react";
-import { TableHeader } from "../../atoms/TableHeader/Header";
+import { TableHeader } from "../../atoms/TableHeader/TableHeader";
 import { Row } from "../../molecules/Row/Row";
 
 require("./styles.scss");
@@ -22,6 +22,10 @@ export const Table:React.FC<{}> = (info) => {
                         if(column === "Club"){
                             return(
                                 <TableHeader key={index} position="left" paddingLeft={20}>{column}</TableHeader>
+                            )
+                        }else if(column === "Form"){
+                            return(
+                                <TableHeader key={index} shrink>{column}</TableHeader>
                             )
                         }
                         return(
