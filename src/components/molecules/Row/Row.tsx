@@ -1,4 +1,5 @@
 import React from "react";
+import { PositionToolTip } from "../PositionToolTip/PositionToolTip";
 import { TeamName } from "../TeamName/TeamName";
 
 type RowInfoType = {
@@ -32,7 +33,7 @@ export const Row:React.FC<{info:RowInfoType}> = (props) => {
             <td className="revealMore">
                 <img src="./images/arrow-down.png"/>
             </td>
-            <td>{props.info.position}</td>
+            <td className="pos-tooltip-button"><PositionToolTip position={props.info.position} prevPosition={props.info.prevPosition} /></td>
             <td className="t-left"> <TeamName teamName={props.info.teamName} image="t001.png"/> </td>
             <td>{props.info.played}</td>
             <td>{props.info.won}</td>

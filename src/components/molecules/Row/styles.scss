@@ -29,3 +29,12 @@ tbody{
         display: block;
     }
 }
+
+.pos-tooltip-button{
+
+    cursor: pointer;
+
+    &:hover .pos-tooltip-container{
+        display: block;
+    }
+}
