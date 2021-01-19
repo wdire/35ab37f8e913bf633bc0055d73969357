@@ -1,0 +1,16 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.flex-item {
+    flex: 0.001;
+}
+
+.flex-dc{
+    flex-direction: column;
+}
+
+.flex-dr{
+    flex-direction: row;
+}
